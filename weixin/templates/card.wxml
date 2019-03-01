@@ -1,0 +1,5 @@
+<template name="card">
+  <view>
+    卡片模板
+  </view>
+</template>

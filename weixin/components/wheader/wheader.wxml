@@ -1,0 +1,4 @@
+<!--components/wheader/wheader.wxml-->
+<view bindtap="testTap" class="wheader">
+  <slot></slot>{{name}}
+</view>

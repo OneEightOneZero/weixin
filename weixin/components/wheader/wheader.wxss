@@ -1,0 +1,13 @@
+/* components/wheader/wheader.wxss */
+
+.wheader{
+  height:50px;
+  width: 100%;
+  background-color: red;
+  color: white;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  top:0;
+  left: 0;
+}

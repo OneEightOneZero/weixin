@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "Wheader":"/components/wheader/wheader"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#58bc58",
+  "navigationBarTitleText": "头上绿油油",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": false,
+  "navigationStyle": "custom"
+}

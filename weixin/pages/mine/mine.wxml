@@ -1,0 +1,47 @@
+<!--pages/mine/mine.wxml-->
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  circular="true"
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="355" height="150" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <view wx:for="{{arr}}">
+  第{{index+1}}个 年龄：{{item.age}} 姓名:{{item.name}}
+</view> -->
+
+<view wx:if="{{bool}}">
+布尔值
+</view>
+<view hidden="{{!bool}}">
+hidden
+</view>
+<button bindtap="toggle">切换状态</button>
+
+<!-- 模板 -->
+<template name="msgItem">
+  <view>
+    <text>{{index}}: {{msg}}</text>
+    <text>Time: {{time}}</text>
+  </view>
+</template>
+<template is="msgItem" data="{{index:1,msg:'hello',time:'abc'}}" />
+<template is="msgItem" data="{{index:2,msg:'hello',time:'abc'}}" />
+<template is="msgItem" data="{{index:3,msg:'hello',time:'abc'}}" />
+<template is="msgItem" data="{{index:4,msg:'llll',time:'abc'}}" />
+
+<import src="/templates/card.wxml" />
+<template is="card" data="{{text: 'forbar'}}" />
+<template is="card" data="{{text: 'forbar'}}" />
+<template is="card" data="{{text: 'forbar'}}" />
+
+
+<Wheader skill="{{['ps','js','html']}}">
+  个人中心
+</Wheader>
