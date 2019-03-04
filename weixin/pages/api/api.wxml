@@ -1,2 +1,29 @@
 <!--pages/api/api.wxml-->
 <text>pages/api/api.wxml</text>
+<button bindtap="switchTab">跳转路由</button>
+<button bindtap="showToast">Toast</button>
+<button bindtap="showModal">模态窗口</button>
+<button bindtap="showNavigation">导航条loading</button>
+<button bindtap="hideNavigation">导航条loading停止</button>
+<button bindtap="showRedDot">底部红点</button>
+<!-- camera.wxml -->
+<!-- <camera
+  device-position="back"
+  binderror="error"
+  style="width: 100%; height: 300px;"
+  mode="scanCode"
+  flash="on"
+  bindscancode="scanCodeSuccess"
+></camera> -->
+<button type="primary" bindtap="takePhoto">拍照</button>
+<button type="primary" bindtap="toggleFlash">闪光灯开关</button>
+<view>预览</view>
+<image mode="widthFix" src="{{src}}"></image>
+
+<button type="primary" bindtap="scanCode">扫码</button>
+
+<button type="primary" bindtap="startRecord">录音</button>
+<button type="primary" bindtap="stopRecord">停止录音</button>
+
+
+<button type="primary" bindtap="openLocation">打开微信地图</button>

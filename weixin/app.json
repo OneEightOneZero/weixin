@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/mine/mine",
-    "pages/api/api"
+    "pages/api/api",
+    "pages/ui/ui"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -37,8 +38,17 @@
       {
         "pagePath": "pages/api/api",
         "text": "我的"
+      },
+      {
+        "pagePath": "pages/ui/ui",
+        "text": "ui"
       }
     ]
   },
-  "debug": true
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

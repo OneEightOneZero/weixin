@@ -1,0 +1,44 @@
+<!--pages/ui/ui.wxml-->
+<text>pages/ui/ui.wxml</text>
+<i-input value="{{ value1 }}" title="收货人" bindinput="changeValue1" autofocus placeholder="名字" />
+<i-input value="{{ inputValue }}" bind:change="bindKeyInput" type="number" title="联系电话" placeholder="请输入手机号" />
+<input value="{{ inputValue }}" bindinput="bindKeyInput" placeholder="输入同步到view中" />
+
+
+<i-swipeout i-class="i-swipeout-demo-item" actions="{{actions}}">
+  <view slot="content">
+    <i-cell i-class="i-cell-padding" title="猛虫过江" label="侏罗纪世界主题公园及豪华度假村被失控的恐龙们摧毁已有四年">
+    </i-cell>
+  </view>
+</i-swipeout>
+
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChange"
+  />
+</van-cell-group>
+
+<van-goods-action>
+  <van-goods-action-icon
+    icon="chat-o"
+    text="客服"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-icon
+    icon="cart-o"
+    text="购物车"
+    bind:click="onClickIcon"
+  />
+  <van-goods-action-button
+    text="加入购物车"
+    type="warning"
+    bind:click="onClickButton"
+  />
+  <van-goods-action-button
+    text="立即购买"
+    bind:click="onClickButton"
+  />
+</van-goods-action>

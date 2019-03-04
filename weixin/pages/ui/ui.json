@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-input":"/iview/input/index",
+    "i-swipeout": "/iview/swipeout/index",
+    "van-field": "/vant/field/index",
+    "van-goods-action": "/vant/goods-action/index",
+    "van-goods-action-icon": "/vant/goods-action-icon/index",
+    "van-goods-action-button": "/vant/goods-action-button/index"
+  }
+}
