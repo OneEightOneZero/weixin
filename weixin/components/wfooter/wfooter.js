@@ -1,6 +1,7 @@
 // components/wfooter/wfooter.js
 import store from '../../utils/store.js'
 import bus from '../../utils/bus.js'
+import vuexStore from '../../utils/vuexStore.js'
 Component({
   /**
    * 组件的属性列表
@@ -24,6 +25,7 @@ Component({
   },
 
   ready() {
+    console.log(vuexStore.$store.state.age)
     console.log(store)
     // 订阅者
     bus.$on('sendDataToFooter',(data)=>{

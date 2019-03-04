@@ -1,6 +1,7 @@
 // components/wheader/wheader.js
 import store from '../../utils/store.js'
 import bus from '../../utils/bus.js'
+import vuexStore from '../../utils/vuexStore.js'
 Component({
   /**
    * 组件的属性列表
@@ -39,6 +40,8 @@ Component({
     console.log(store)
     console.log(this)
     console.log(bus)
+    console.log(vuexStore.$store.state.age)
+    vuexStore.$store.dispatch("setAge",18)
     
   }
 })
