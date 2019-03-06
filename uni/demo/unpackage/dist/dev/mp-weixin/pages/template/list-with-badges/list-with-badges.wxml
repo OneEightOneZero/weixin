@@ -1,0 +1,2 @@
+<import src="./list-with-badges.vue.wxml" />
+    <template is="7ecad68c" data="{{ ...$root['0'], $root }}"/>

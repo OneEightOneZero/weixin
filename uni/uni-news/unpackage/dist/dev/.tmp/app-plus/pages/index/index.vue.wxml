@@ -1,0 +1,1 @@
+<import src="/components/list2detail-list/list2detail-list.vue.wxml" /><template name="440ff7e3"><view class="_view 440ff7e3 content"><template data="{{...$root['0'], ...$root[$kk+'440ff7e3-0'],$root}}" is="2e6a763d"></template></view></template>

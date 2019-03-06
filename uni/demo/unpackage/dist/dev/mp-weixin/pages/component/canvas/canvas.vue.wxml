@@ -1,0 +1,1 @@
+<import src="/components/page-head.vue.wxml" /><template name="792e9c2a"><view class="_view 792e9c2a"><template data="{{...$root['0'], ...$root[$kk+'792e9c2a-0'],$root}}" is="05a1a7ac"></template><view class="_view 792e9c2a page-body"><view class="_view 792e9c2a page-body-wrapper"><canvas canvas-id="canvas" class="_canvas 792e9c2a canvas"></canvas></view></view></view></template>

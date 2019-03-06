@@ -1,0 +1,2 @@
+<import src="./radio.vue.wxml" />
+    <template is="232097e3" data="{{ ...$root['0'], $root }}"/>
