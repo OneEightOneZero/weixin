@@ -3,46 +3,59 @@
 
 <head>
     <style type="text/css">
-        #div1 {
-            width: 350px;
-            height: 70px;
-            padding: 10px;
-            border: 1px solid #aaaaaa;
+        * {
+            margin: 0;
+            padding: 0
         }
 
-        #drag1 {
+        #content {
             position: absolute;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            bottom: 0px;
+        }
+
+        #drag {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            left: 30px;
+            top: 30px;
         }
     </style>
-    <script type="text/javascript">
-        function allowDrop(ev) {
-            console.log(ev.clientX, ev.clientY)
-            console.log('没放手')
-            ev.target.style.left = ev.clientX + 'px'
-            ev.target.style.top = ev.clientY + 'px'
-            ev.preventDefault();
-        }
 
-        function drag(ev) {
-            console.log('开始拖')
-            ev.dataTransfer.setData("Text", ev.target.id);
-        }
-
-        function drop(ev) {
-            console.log('放手')
-            var data = ev.dataTransfer.getData("Text");
-            ev.target.appendChild(document.getElementById(data));
-            ev.preventDefault();
-        }
-    </script>
 </head>
+<!-- ondragover 拖动过程中触发 -->
+<!-- ondrop 释放触发 -->
+<!-- ondragstart 开始拖动触发 -->
 
-<body ondragover="allowDrop(event)">
-
-    <div id="div1" ondrop="drop(event)"></div>
-    <br />
-    <p id="drag1" draggable="true" ondragstart="drag(event)">这是一段可移动的段落。请把该段落拖入上面的矩形。</p>
-    <!-- <p draggable="true">1236868726384</p> -->
+<body>
+    <div id="content" @dragover="allowDrop($event)" @drop="drop($event)">
+        <div id="drag" draggable="true" @dragstart="drag($event)"></div>
+    </div>
+    <script src="vue.js"></script>
+    <script type="text/javascript">
+        new Vue({
+            el: "#content",
+            methods: {
+                allowDrop(ev) {
+                    console.log('没放手')
+                    ev.preventDefault();
+                },
+                drag(ev) {
+                    console.log('开始拖')
+                },
+                drop(ev) {
+                    console.log('放手')
+                    console.log(ev.clientX, ev.clientY)
+                    document.getElementById("drag").style.left = ev.clientX - 25 + 'px'
+                    document.getElementById("drag").style.top = ev.clientY - 25 + 'px'
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
